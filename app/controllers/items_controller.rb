@@ -1,2 +1,5 @@
 class ItemsController < ApplicationController
-end
+    def index
+      render json: Item.all, include: :user
+    end
+  end
